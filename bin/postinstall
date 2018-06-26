@@ -1,0 +1,7 @@
+#!/bin/bash
+rm -rf var/generation/ var/cache/ var/page_cache/
+rm -rf pub/static/frontend/ pub/static/adminhtml/ pub/static/_requirejs/
+php bin/magento setup:upgrade
+php bin/magento setup:static-content:deploy -f
+php bin/magento cache:flush
+chmod -R a+x pub/ var/ generated/
