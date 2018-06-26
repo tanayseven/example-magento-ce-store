@@ -1,0 +1,22 @@
+version: '2'
+services:
+  database:
+    build:
+      context: .
+      dockerfile: Database.Dockerfile
+    volumes:
+      - .:/app
+    working_dir: '/app'
+    ports:
+      - "3306:3306"
+  magento:
+    build:
+      context: .
+      dockerfile: Magento.Dockerfile
+    volumes:
+      - .:/var/www/html
+    working_dir: '/var/www/html'
+    ports:
+      - "80:80"
+    depends_on:
+      - database
