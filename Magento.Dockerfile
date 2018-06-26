@@ -1,7 +1,7 @@
 FROM php:7.0.28-apache
 
 ADD . /var/www/html
-ADD ./composer /bin/composer
+ADD ./bin/ /bin/
 
 WORKDIR /var/www/html
 RUN apt-get update && apt-get install -y \

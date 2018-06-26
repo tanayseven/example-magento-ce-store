@@ -1,0 +1,2 @@
+#!/bin/bash
+chmod -R a+rw pub/ var/ app/

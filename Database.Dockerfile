@@ -11,5 +11,4 @@ RUN apt-get update && apt-get install -y \
 
 RUN /etc/init.d/mysql start \
 	mysql -u root -proot -e "CREATE DATABASE magento"  \
-    && /etc/init.d/mysql start \
-	mysql -u root -proot  magento < database_dump.sql
+    && /etc/init.d/mysql start
