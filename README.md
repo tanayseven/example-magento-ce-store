@@ -23,5 +23,7 @@ rm -rf var/cache var/di var/generation var/page_cache   # To clear all the cache
 php bin/magento module:status    # Check the list of enabled modules
 php bin/magento module:enable <vendor_name>_<module_name>     # Enable the given module
 php bin/magento setup:upgrade    # Upgrade the database
-php bin/magento setup:static-content:deploy   # To build all the static files (i.e. CSS/JS)
+php bin/magento setup:static-content:deploy    # To build all the static files (i.e. CSS/JS)
+./vendor/bin/phpunit -c dev/tests/unit/phpunit.xml.dist    # Run all the unit tests
+./vendor/bin/phpunit -c dev/tests/unit/phpunit.xml.dist app/code/<module_vendor>/<module_name>/Test/Unit/<componenet>/<file>.php    # Run path specific tests
 ```
