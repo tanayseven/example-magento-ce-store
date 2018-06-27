@@ -3,4 +3,5 @@ rm -rf var/generation/ var/cache/ var/page_cache/
 rm -rf pub/static/frontend/ pub/static/adminhtml/ pub/static/_requirejs/
 php bin/magento setup:upgrade
 php bin/magento setup:static-content:deploy
-chmod -R a+rw pub/ var/ generated/ app/
+php bin/magento cache:clean
+chmod -R a+rw pub/ var/ app/
