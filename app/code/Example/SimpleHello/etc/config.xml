@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Magento/Store/etc/config.xsd">
+    <default>
+        <example_simplehello>
+            <general>
+                <enable>1</enable>
+                <block_label>Test Block Label</block_label>
+                <text_align>center</text_align>
+            </general>
+        </example_simplehello>
+    </default>
+</config>
